@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-21T12:20:47.968Z</updated>
+  <updated>2017-12-21T13:36:55.352Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,20 +17,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>article title</title>
+    <title>建站日志</title>
     <link href="http://yoursite.com/2017/12/20/article-title/"/>
     <id>http://yoursite.com/2017/12/20/article-title/</id>
     <published>2017-12-20T05:51:25.000Z</published>
-    <updated>2017-12-21T12:20:47.968Z</updated>
+    <updated>2017-12-21T13:36:55.352Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>2017-12-19:在GoDaddy上购买独立域名 audient.me</li><li>2017-12-20:使用Hexo创建博客，主题修改自coney，源码及内容托管于GitHub，完成博客网站基本搭建。</li></ul>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;2017-12-19:在GoDaddy上购买独立域名 audient.me&lt;/li&gt;
+&lt;li&gt;2017-12-20:使用Hexo创建博客，主题修改自coney，源码及内容托管于GitHub，完成博客网站基本搭建。&lt;/li&gt;
+&lt;/ul&gt;
+
+      
+    
     </summary>
     
-      <category term="Citcom" scheme="http://yoursite.com/categories/Citcom/"/>
-    
-    
-      <category term="benchmark" scheme="http://yoursite.com/tags/benchmark/"/>
     
   </entry>
   
