@@ -5,9 +5,9 @@
   <subtitle>We are all in the gutter, but some of us are looking at the stars.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://shenxb06.github.io/"/>
   <updated>2017-12-22T01:48:43.004Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://shenxb06.github.io/</id>
   
   <author>
     <name>Shen &amp; Miao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>建站日志</title>
-    <link href="http://yoursite.com/2017/12/20/WebsiteConstruction/"/>
-    <id>http://yoursite.com/2017/12/20/WebsiteConstruction/</id>
+    <link href="http://shenxb06.github.io/2017/12/20/WebsiteConstruction/"/>
+    <id>http://shenxb06.github.io/2017/12/20/WebsiteConstruction/</id>
     <published>2017-12-20T05:51:25.000Z</published>
     <updated>2017-12-22T01:48:43.004Z</updated>
     
