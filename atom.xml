@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-22T01:46:26.042Z</updated>
+  <updated>2017-12-22T01:48:43.004Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>建站日志</title>
-    <link href="http://yoursite.com/2017/12/20/article-title/"/>
-    <id>http://yoursite.com/2017/12/20/article-title/</id>
+    <link href="http://yoursite.com/2017/12/20/WebsiteConstruction/"/>
+    <id>http://yoursite.com/2017/12/20/WebsiteConstruction/</id>
     <published>2017-12-20T05:51:25.000Z</published>
-    <updated>2017-12-22T01:46:26.042Z</updated>
+    <updated>2017-12-22T01:48:43.004Z</updated>
     
-    <content type="html"><![CDATA[<ul><li><p>2017-12-19:在GoDaddy上购买独立域名 audient.me</p></li><li><p>2017-12-20:使用Hexo创建博客，主题修改自coney，源码及内容托管于GitHub，完成博客网站基本搭建。</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><p>2017-12-19:在GoDaddy上购买独立域名 audient.me</p></li><li><p>2017-12-20:使用Hexo创建博客，主题修改自coney，源码及内容托管于GitHub，完成网站的基本搭建。</p></li></ul>]]></content>
     
     <summary type="html">
     
@@ -32,9 +32,9 @@
         &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;2017-12-19:在GoDaddy上购买独立域名 audient.me&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;2017-12-20:使用Hexo创建博客，主题修改自coney，源码及内容托管于GitHub，完成博客网站基本搭建。&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;2017-12-20:使用Hexo创建博客，主题修改自coney，源码及内容托管于GitHub，完成网站的基本搭建。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/u
+&lt;/ul
       
     
     </summary>
