@@ -12,9 +12,10 @@
     
     <meta name="author" content="Shen &amp; Miao">
     
-    <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在Ellipsis中考虑岩石圈和地幔为粘-弹-塑性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：
+    <meta name="description" content="在Ellipsis中考虑岩石圈和地幔为粘-弹-塑性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：
 
-$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}">
+$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}+\frac{1}{2\eta}s_{ij}$$ 
+其中\(\dot{\">
     
     
     
@@ -102,7 +103,7 @@ $$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}">
     </p>
   <p class="article-time">
     <time datetime="2017-12-22T14:52:27.000Z" itemprop="datePublished">2017-12-22</time>
-    Updated:<time datetime="2017-12-23T09:29:56.898Z" itemprop="dateModified">2017-12-23</time>
+    Updated:<time datetime="2017-12-23T13:10:57.080Z" itemprop="dateModified">2017-12-23</time>
     
   </p>
 </header>
@@ -116,12 +117,12 @@ $$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}">
 		
 		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在Ellipsis中考虑岩石圈和地幔为<em>粘-弹-塑</em>性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：</p>
+<p>在Ellipsis中考虑岩石圈和地幔为<em>粘-弹-塑</em>性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：</p>
 <blockquote>
 <p>$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}+\frac{1}{2\eta}s_{ij}$$ </p>
 <p>其中\(\dot{\varepsilon_{ij}}\),\(\dot{s_{ij}}\),\(s_{ij}\),以及G和\(\eta\)分别代表应变率，偏应力随时间变化，偏应力，剪切模量以及粘滞度。</p>
 </blockquote>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 非牛顿体模型中剪切应力与剪切应变率之间呈非线性关系。即：</p>
+<p>非牛顿体模型中剪切应力与剪切应变率之间呈非线性关系。即：</p>
 <blockquote>
 <p>$$\varepsilon=A\tau^n$$</p>
 <p>其中\(\varepsilon\)是应变率，\(\tau\)是偏应力，A是与颗粒大小及含水量相关系数，指数n为3左右。当n=1时变为牛顿流体。因此我们在Ellipsis中参数设置n时一般为3.05或3.5。<br>这个参数同样也影响着粘滞度结构：</p>
@@ -140,9 +141,9 @@ $$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}">
 <p>这里面要强调的是\(\varepsilon_f\)这个参数，当参考应变率越大时，会影响\(\mu\)和C变大，因此也会影响材料的强度变强。</p>
 </blockquote>
 <p>这是几个目前我认为的比较值得注意的参数，了解这几个参数对于学习Ellipsis程序比较有用。</p>
-<p><em>reference</em></p>
+<p><strong><em>Reference</em></strong></p>
 <ul>
-<li><a href="http://onlinelibrary.wiley.com/doi/10.1029/2011GC003877/full" target="_blank" rel="noopener">Leng, W., and M. Gurnis (2011),Dynamics of subduction initiation with different evolutionary pathways,Geochem.Geophys.Geosyst.,</a></li>
+<li><a href="http://onlinelibrary.wiley.com/doi/10.1029/2011GC003877/full" target="_blank" rel="noopener">Leng, W., and M. Gurnis (2011),Dynamics of subduction initiation with different evolutionary pathways,Geochem.Geophys.Geosyst.</a></li>
 </ul>
 <p><em>在写文章时的一点想法</em><br><em>GitHub上并不支持LaTex语言，因此所有直接输入的LaTex公式都不能直接显示，因此要借助codecogs等的云服务来在线生成公式。目前内心毫无波动……</em><br><em>此外，即使你用云服务器生成的公式图片也只能单独一行显示。毫无波动到无法呼吸。因此只能换成MathJax引擎渲染。但是！还要注意每行不能出现超过一个下划线，因此当出现超过一个下划线是要用转义字符,内心再一次毫无波动……</em></p>
   

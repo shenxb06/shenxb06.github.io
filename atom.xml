@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://shenxb06.github.io/"/>
-  <updated>2017-12-23T09:29:56.898Z</updated>
+  <updated>2017-12-23T13:10:57.080Z</updated>
   <id>http://shenxb06.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://shenxb06.github.io/2017/12/22/Ellipsis%E7%9A%84%E4%B8%80%E4%BA%9B%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
     <id>http://shenxb06.github.io/2017/12/22/Ellipsis的一些参数设置问题/</id>
     <published>2017-12-22T14:52:27.000Z</published>
-    <updated>2017-12-23T09:29:56.898Z</updated>
+    <updated>2017-12-23T13:10:57.080Z</updated>
     
-    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在Ellipsis中考虑岩石圈和地幔为<em>粘-弹-塑</em>性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：</p><blockquote><p>$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}+\frac{1}{2\eta}s_{ij}$$ </p><p>其中\(\dot{\varepsilon_{ij}}\),\(\dot{s_{ij}}\),\(s_{ij}\),以及G和\(\eta\)分别代表应变率，偏应力随时间变化，偏应力，剪切模量以及粘滞度。</p></blockquote><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 非牛顿体模型中剪切应力与剪切应变率之间呈非线性关系。即：</p><blockquote><p>$$\varepsilon=A\tau^n$$</p><p>其中\(\varepsilon\)是应变率，\(\tau\)是偏应力，A是与颗粒大小及含水量相关系数，指数n为3左右。当n=1时变为牛顿流体。因此我们在Ellipsis中参数设置n时一般为3.05或3.5。<br>这个参数同样也影响着粘滞度结构：</p></blockquote><p>$$\eta=\eta_0({\frac{\dot{\varepsilon}_{\Pi}}{\dot{\varepsilon_0}}})^{\left( \frac{1}{n}-1 \right)}exp[\frac{E}{nR}(\frac{1}{T}-\frac{1}{T_0})]$$</p><blockquote><p>这里面\(\dot{\varepsilon_0}\)是参考应变率，在地球动力学的一些文献中一般为\(10^{-15}s^{-1}\)。E为活化能，R为气体常数。在软件中我们经过<a href="https://academic.oup.com/gji/article/173/2/693/2127937/&quot;Title&quot;" target="_blank" rel="noopener"><em>无量纲化</em> </a>后输入相应的值。</p></blockquote><p>在考虑弹性形变时要考虑物质的屈服应力。在Drucker_Prager屈服模型中：</p><blockquote><p>$$\tau_y=\mu P+C$$</p><p>\(\tau_y\),\(\mu\),P和 C 分别是屈服应力，摩擦系数，压力和内聚力。内聚力指在无正压力作用下材料的强度。因此我们可以看出这几个参数与材料的强度成正比关系。这都是在软件中调整材料软硬的重要指标。值得注意的是，当增加\(\mu\)时，由于在地球尺度下P的值可以达到十几的数量级，因此当改变摩擦系数时对于材料强度的改变是非常巨大的。一般在调整时我们选择对内聚力以及参考应变率等进行调整。</p><p>其次，内聚力和摩擦系数也由下面两个公式决定。</p><p>$$\mu=\mu_0[1-min(1,\frac{\varepsilon_p}{\varepsilon_f})]$$</p><p>$$C=C_f+(C_0-C_f)[1-min(1,\frac{\varepsilon_p}{\varepsilon_f})]$$</p><p>这里面要强调的是\(\varepsilon_f\)这个参数，当参考应变率越大时，会影响\(\mu\)和C变大，因此也会影响材料的强度变强。</p></blockquote><p>这是几个目前我认为的比较值得注意的参数，了解这几个参数对于学习Ellipsis程序比较有用。</p><p><em>reference</em></p><ul><li><a href="http://onlinelibrary.wiley.com/doi/10.1029/2011GC003877/full" target="_blank" rel="noopener">Leng, W., and M. Gurnis (2011),Dynamics of subduction initiation with different evolutionary pathways,Geochem.Geophys.Geosyst.,</a></li></ul><p><em>在写文章时的一点想法</em><br><em>GitHub上并不支持LaTex语言，因此所有直接输入的LaTex公式都不能直接显示，因此要借助codecogs等的云服务来在线生成公式。目前内心毫无波动……</em><br><em>此外，即使你用云服务器生成的公式图片也只能单独一行显示。毫无波动到无法呼吸。因此只能换成MathJax引擎渲染。但是！还要注意每行不能出现超过一个下划线，因此当出现超过一个下划线是要用转义字符,内心再一次毫无波动……</em></p>]]></content>
+    <content type="html"><![CDATA[<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><p>在Ellipsis中考虑岩石圈和地幔为<em>粘-弹-塑</em>性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：</p><blockquote><p>$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}+\frac{1}{2\eta}s_{ij}$$ </p><p>其中\(\dot{\varepsilon_{ij}}\),\(\dot{s_{ij}}\),\(s_{ij}\),以及G和\(\eta\)分别代表应变率，偏应力随时间变化，偏应力，剪切模量以及粘滞度。</p></blockquote><p>非牛顿体模型中剪切应力与剪切应变率之间呈非线性关系。即：</p><blockquote><p>$$\varepsilon=A\tau^n$$</p><p>其中\(\varepsilon\)是应变率，\(\tau\)是偏应力，A是与颗粒大小及含水量相关系数，指数n为3左右。当n=1时变为牛顿流体。因此我们在Ellipsis中参数设置n时一般为3.05或3.5。<br>这个参数同样也影响着粘滞度结构：</p></blockquote><p>$$\eta=\eta_0({\frac{\dot{\varepsilon}_{\Pi}}{\dot{\varepsilon_0}}})^{\left( \frac{1}{n}-1 \right)}exp[\frac{E}{nR}(\frac{1}{T}-\frac{1}{T_0})]$$</p><blockquote><p>这里面\(\dot{\varepsilon_0}\)是参考应变率，在地球动力学的一些文献中一般为\(10^{-15}s^{-1}\)。E为活化能，R为气体常数。在软件中我们经过<a href="https://academic.oup.com/gji/article/173/2/693/2127937/&quot;Title&quot;" target="_blank" rel="noopener"><em>无量纲化</em> </a>后输入相应的值。</p></blockquote><p>在考虑弹性形变时要考虑物质的屈服应力。在Drucker_Prager屈服模型中：</p><blockquote><p>$$\tau_y=\mu P+C$$</p><p>\(\tau_y\),\(\mu\),P和 C 分别是屈服应力，摩擦系数，压力和内聚力。内聚力指在无正压力作用下材料的强度。因此我们可以看出这几个参数与材料的强度成正比关系。这都是在软件中调整材料软硬的重要指标。值得注意的是，当增加\(\mu\)时，由于在地球尺度下P的值可以达到十几的数量级，因此当改变摩擦系数时对于材料强度的改变是非常巨大的。一般在调整时我们选择对内聚力以及参考应变率等进行调整。</p><p>其次，内聚力和摩擦系数也由下面两个公式决定。</p><p>$$\mu=\mu_0[1-min(1,\frac{\varepsilon_p}{\varepsilon_f})]$$</p><p>$$C=C_f+(C_0-C_f)[1-min(1,\frac{\varepsilon_p}{\varepsilon_f})]$$</p><p>这里面要强调的是\(\varepsilon_f\)这个参数，当参考应变率越大时，会影响\(\mu\)和C变大，因此也会影响材料的强度变强。</p></blockquote><p>这是几个目前我认为的比较值得注意的参数，了解这几个参数对于学习Ellipsis程序比较有用。</p><p><strong><em>Reference</em></strong></p><ul><li><a href="http://onlinelibrary.wiley.com/doi/10.1029/2011GC003877/full" target="_blank" rel="noopener">Leng, W., and M. Gurnis (2011),Dynamics of subduction initiation with different evolutionary pathways,Geochem.Geophys.Geosyst.</a></li></ul><p><em>在写文章时的一点想法</em><br><em>GitHub上并不支持LaTex语言，因此所有直接输入的LaTex公式都不能直接显示，因此要借助codecogs等的云服务来在线生成公式。目前内心毫无波动……</em><br><em>此外，即使你用云服务器生成的公式图片也只能单独一行显示。毫无波动到无法呼吸。因此只能换成MathJax引擎渲染。但是！还要注意每行不能出现超过一个下划线，因此当出现超过一个下划线是要用转义字符,内心再一次毫无波动……</em></p>]]></content>
     
     <summary type="html">
     
@@ -31,7 +31,7 @@
       
         &lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;
+&lt;p&gt;在Ellipsis中考虑岩石圈和地幔为&lt;em&gt;粘-
       
     
     </summary>
