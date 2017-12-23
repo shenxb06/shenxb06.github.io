@@ -1,6 +1,5 @@
 
-  
-    <!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html lang="zh-Hans">
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
@@ -8,12 +7,14 @@
   <meta name="360-site-verification" content="67fbcc5a67f4c65c057315b28fa0b2c8" />
 <meta name="google-site-verification" content="2GzxQ0VtXwTSUdmGm6DzcmhTzM_I9QmzCb_pzpMzD88" />
   
-    <title>关于 | Geodynamics</title>
+    <title>CitcomToEllipsis中的一点参数设置问题 | Geodynamics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="Shen &amp; Miao">
     
-    <meta name="description" content="geodynamics citcom citcomcu citcoms mantle convection">
+    <meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在Ellipsis中考虑岩石圈和地幔为粘-弹-塑性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：
+
+$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}">
     
     
     
@@ -39,9 +40,9 @@
      
 </head>
 
-      <body>
-        <!-- hexo-inject:begin --><!-- hexo-inject:end --><header>
-          <div>
+  <body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header>
+      <div>
 		
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Geodynamics">Geodynamics</a></h1>
@@ -86,72 +87,183 @@
 </script>			
 </div>
 
-        </header>
-        <div id="container">
-          <div id="main" class="page" itemscope itemprop="blogPost">
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/about/index.html" title="关于" itemprop="url">关于</a>
+      <a href="/2017/12/22/Ellipsis的一些参数设置问题/" title="CitcomToEllipsis中的一点参数设置问题" itemprop="url">CitcomToEllipsis中的一点参数设置问题</a>
   </h1>
   <p class="article-author">By
     
       <a href="http://shenxb06.github.io" title="Shen &amp; Miao">Shen &amp; Miao</a>
     </p>
   <p class="article-time">
-    <time datetime="2017-12-21T04:01:14.000Z" itemprop="datePublished">2017-12-21</time>
-    更新日期:<time datetime="2017-12-21T04:35:29.800Z" itemprop="dateModified">2017-12-21</time>
+    <time datetime="2017-12-22T14:52:27.000Z" itemprop="datePublished">2017-12-22</time>
+    更新日期:<time datetime="2017-12-23T09:27:40.035Z" itemprop="dateModified">2017-12-23</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		
-		<h2 id="关于博主"><a href="#关于博主" class="headerlink" title="关于博主"></a>关于博主</h2><p>USTC地球动力学在读研究生</p>
-<h2 id="关于博文"><a href="#关于博文" class="headerlink" title="关于博文"></a>关于博文</h2><ul>
-<li>博文主要以地球动力学方面内容为主，以地震、重力、电法等地球物理其他方向内容为辅。</li>
-<li>博文内容以原创内容为主，翻译和转载为辅。</li>
-<li>参考、翻译的文章将分别在文末和文首给出。</li>
-<li>对于转载文章，尊重原作者版权，遵守转载协议。</li>
-</ul>
-<h2 id="版权问题"><a href="#版权问题" class="headerlink" title="版权问题"></a>版权问题</h2><p>本博客中原创内容，采用“创作共用BY-NC-SA 4.0国际许可证”版权协议。</p>
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+		</div>
+		
+		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在Ellipsis中考虑岩石圈和地幔为<em>粘-弹-塑</em>性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：</p>
+<blockquote>
+<p>$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}+\frac{1}{2\eta}s_{ij}$$ </p>
+<p>其中\(\dot{\varepsilon_{ij}}\),\(\dot{s_{ij}}\),\(s_{ij}\),以及G和\(\eta\)分别代表应变率，偏应力随时间变化，偏应力，剪切模量以及粘滞度。</p>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 非牛顿体模型中剪切应力与剪切应变率之间呈非线性关系。即：</p>
+<blockquote>
+<p>$$\varepsilon=A\tau^n$$</p>
+<p>其中\(\varepsilon\)是应变率，\(\tau\)是偏应力，A是与颗粒大小及含水量相关系数，指数n为3左右。当n=1时变为牛顿流体。因此我们在Ellipsis中参数设置n时一般为3.05或3.5。<br>这个参数同样也影响着粘滞度结构：</p>
+</blockquote>
+<p>$$\eta=\eta_0({\frac{\dot{\varepsilon}_{\Pi}}{\dot{\varepsilon_0}}})^{\left( \frac{1}{n}-1 \right)}exp[\frac{E}{nR}(\frac{1}{T}-\frac{1}{T_0})]$$</p>
+<blockquote>
+<p>这里面\(\dot{\varepsilon_0}\)是参考应变率，在地球动力学的一些文献中一般为\(10^{-15}s^{-1}\)。E为活化能，R为气体常数。在软件中我们经过<a href="https://academic.oup.com/gji/article/173/2/693/2127937/&quot;Title&quot;" target="_blank" rel="noopener"><em>无量纲化</em> </a>后输入相应的值。</p>
+</blockquote>
+<p>在考虑弹性形变时要考虑物质的屈服应力。在Drucker_Prager屈服模型中：</p>
+<blockquote>
+<p>$$\tau_y=\mu P+C$$</p>
+<p>\(\tau_y\),\(\mu\),P和 C 分别是屈服应力，摩擦系数，压力和内聚力。内聚力指在无正压力作用下材料的强度。因此我们可以看出这几个参数与材料的强度成正比关系。这都是在软件中调整材料软硬的重要指标。值得注意的是，当增加\(\mu\)时，由于在地球尺度下P的值可以达到十几的数量级，因此当改变摩擦系数时对于材料强度的改变是非常巨大的。一般在调整时我们选择对内聚力以及参考应变率等进行调整。</p>
+<p>其次，内聚力和摩擦系数也由下面两个公式决定。</p>
+<p>$$\mu=\mu_0[1-min(1,\frac{\varepsilon_p}{\varepsilon_f})]$$</p>
+<p>$$C=C_f+(C_0-C_f)[1-min(1,\frac{\varepsilon_p}{\varepsilon_f})]$$</p>
+<p>这里面要强调的是\(\varepsilon_f\)这个参数，当参考应变率越大时，会影响\(\mu\)和C变大，因此也会影响材料的强度变强。</p>
+</blockquote>
+<p>这是几个目前我认为的比较值得注意的参数，了解这几个参数对于学习Ellipsis程序比较有用。</p>
+<p><em>reference</em></p>
 <ul>
-<li>所有人可自用分享、修改博文内容。</li>
-<li>转载需保留署名。</li>
-<li>严禁用于盈利性目的。</li>
+<li><a href="http://onlinelibrary.wiley.com/doi/10.1029/2011GC003877/full" target="_blank" rel="noopener">Leng, W., and M. Gurnis (2011),Dynamics of subduction initiation with different evolutionary pathways,Geochem. Geophys.<br>Geosyst.,</a></li>
 </ul>
-<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><p>若对博文存在疑问或问题，请通过电子邮件联系。</p>
-<ul>
-<li>电子邮箱：shenxb06@mail.ustc.edu.cn</li>
-</ul>
+<p><em>在写文章时的一点想法</em><br><em>GitHub上并不支持LaTex语言，因此所有直接输入的LaTex公式都不能直接显示，因此要借助codecogs等的云服务来在线生成公式。目前内心毫无波动……</em><br><em>此外，即使你用云服务器生成的公式图片也只能单独一行显示。毫无波动到无法呼吸。因此只能换成MathJax引擎渲染。但是！还要注意每行不能出现超过一个下划线，因此当出现超过一个下划线是要用转义字符,内心再一次毫无波动……</em></p>
   
 	</div>
 		<footer class="article-footer clearfix">
 
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/参数设置/">参数设置</a>
+  </div>
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/CitcomToEllipsis/">CitcomToEllipsis</a>
+</div>
 
 
 
 <div class="article-share" id="share">
 
-  <div data-url="http://shenxb06.github.io/about/index.html" data-title="关于 | Geodynamics" data-tsina="" class="share clearfix">
+  <div data-url="http://shenxb06.github.io/2017/12/22/Ellipsis的一些参数设置问题/" data-title="CitcomToEllipsis中的一点参数设置问题 | Geodynamics" data-tsina="" class="share clearfix">
   </div>
 
 </div>
 </footer>   	       
 	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2017/12/20/WebsiteConstruction/"  title="建站日志">
+ <strong>NEXT:</strong><br/> 
+ <span>建站日志
+</span>
+</a>
+</div>
+
+</nav>
+
 	
 <section class="comment">
 	
-	<div class="ds-thread"></div>
+	<div class="ds-thread" data-title="CitcomToEllipsis中的一点参数设置问题" data-thread-key="Ellipsis的一些参数设置问题" data-author-key="Shen &amp; Miao" data-url="http://shenxb06.github.io/post/Ellipsis的一些参数设置问题"></div>
 	
 </section>
 
 
 </div>  
-      </div>
-      <footer><div id="footer" >
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+<div id="authorInfo">
+	
+		<div class="author-logo"></div>		
+	
+	<div class="social-list" class="clearfix">
+		
+		
+		
+		
+		
+	</div>
+</div>
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+			<li><a href="/categories/CitcomToEllipsis/" title="CitcomToEllipsis">CitcomToEllipsis<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/参数设置/" title="参数设置">参数设置<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+      <li><a href="http://github.com/shenxb06" target="_blank" title="github">GitHub</a></li>
+      <li><a href="http://www.google.com" target="_blank" title="google">Google</a></li>
+    </ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  
+  <div class="tagcloudlist">
+    <p class="asidetitle">标签云</p>
+    <div class="tagcloudlist clearfix">
+       <a href="/tags/参数设置/" style="font-size: 10px;">参数设置</a>
+    </div>
+  </div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
     
             <p class="copyright"> © 2017 
 		
@@ -160,7 +272,7 @@
             && Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> && Theme by <a href="http://gengbiao.me" target="_blank" title="coney">coney</a>
             </div>
 </footer>
-        <script src="/js/jquery-2.1.0.min.js"></script>
+    <script src="/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){
@@ -187,6 +299,8 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
@@ -203,6 +317,38 @@ $(document).ready(function(){
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
 });
 </script>
 
@@ -351,7 +497,6 @@ ga('send', 'pageview');
 <!-- hexo-inject:end -->
 
 
-      </body>
-     </html>
-     
+  </body>
+</html>
 
