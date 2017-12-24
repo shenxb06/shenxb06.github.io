@@ -46,7 +46,7 @@
 				<h1 class="site-name"><a href="/" title="Geodynamics">Geodynamics</a></h1>
 				<a class="blog-motto">We are all in the gutter, but some of us are looking at the stars.</a>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -100,7 +100,7 @@
     </p>
   <p class="article-time">
     <time datetime="2017-12-24T05:22:11.000Z" itemprop="datePublished">2017-12-24</time>
-    更新日期:<time datetime="2017-12-24T14:34:49.631Z" itemprop="dateModified">2017-12-24</time>
+    Updated:<time datetime="2017-12-24T14:45:50.794Z" itemprop="dateModified">2017-12-24</time>
     
   </p>
 </header>
@@ -108,7 +108,7 @@
 		
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
+			<strong class="toc-title">Contents</strong>
 		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text"><span id="&#x51C6;&#x5907;">&#x51C6;&#x5907;</span></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text"><span id="citcom&#x4EE3;&#x7801;&#x7F16;&#x8BD1;">CitCom&#x4EE3;&#x7801;&#x7F16;&#x8BD1;</span></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"><span id="input&#x6587;&#x4EF6;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;">input&#x6587;&#x4EF6;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;</span></span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.0.1.</span> <span class="toc-text"><span id="rayleigh&#x6570;&#x8BBE;&#x7F6E;">Rayleigh&#x6570;&#x8BBE;&#x7F6E;</span></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.0.2.</span> <span class="toc-text"><span id="&#x5206;&#x8FA8;&#x7387;&#x8BBE;&#x7F6E;">&#x5206;&#x8FA8;&#x7387;&#x8BBE;&#x7F6E;</span></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.0.3.</span> <span class="toc-text"><span id="viscosity&#x8BBE;&#x7F6E;">Viscosity&#x8BBE;&#x7F6E;</span></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.0.4.</span> <span class="toc-text"><span id="&#x91CF;&#x7EB2;&#x5316;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;">&#x91CF;&#x7EB2;&#x5316;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;</span></span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text"><span id="&#x8FD0;&#x884C;citcom">&#x8FD0;&#x884C;CitCom</span></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text"><span id="&#x8FD0;&#x884C;&#x7ED3;&#x679C;">&#x8FD0;&#x884C;&#x7ED3;&#x679C;</span></span></a></li></ol>
 		</div>
 		
@@ -129,7 +129,7 @@
 <p>对input文件中较为重要或需要修改的参数及其含义如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">rayleigh=1.0e7         <span class="comment"># 地幔模拟计算中最主要的控制参数，非常重要</span></span><br><span class="line"></span><br><span class="line">datafile=<span class="string">"CASE_test"</span>   <span class="comment"># 运算结果文件将存储于该路径下的文件夹中</span></span><br><span class="line">maxstep=100000         <span class="comment"># 设置最大运行步数</span></span><br><span class="line">storage_spacing=50     <span class="comment"># 设置输出步数间隔</span></span><br><span class="line"></span><br><span class="line">restart=0              <span class="comment"># 重启设置当需接着之前某一已经运行过的case时，将其值有"0"改为"1"</span></span><br><span class="line">restart_timesteps=0    <span class="comment"># 设置重新运行时由之前的哪一步开始</span></span><br><span class="line">oldfile=<span class="string">"CASE_TV11H"</span>   <span class="comment"># 因重启运算读取该文件夹路径下存储的原计算结果数据</span></span><br><span class="line"></span><br><span class="line">dimenx=2.0             <span class="comment"># 该值与dimenz组合，可设置对流box的length：high比值</span></span><br><span class="line">dimenz=1.0</span><br><span class="line"></span><br><span class="line">z_grid_layers=4        <span class="comment"># Z方向网格分布，主要用来网格加密，在benchmark中是均匀网格，可改为2</span></span><br><span class="line">zz=0.,0.08,0.92,1.0    <span class="comment"># 若为均匀网格，则改为： 1,1.0</span></span><br><span class="line">nz=1,17,113,129        <span class="comment"># 若为均匀网格，则改为： 1,129</span></span><br><span class="line"></span><br><span class="line">x_grid_layers=2        <span class="comment"># 同上，但为X方向的网格分布</span></span><br><span class="line">xx=0.,2.0</span><br><span class="line">nx=1,257</span><br><span class="line">mgunitx=4</span><br><span class="line">mgunitz=2</span><br><span class="line">levels=7</span><br><span class="line"></span><br><span class="line">Viscosity=system</span><br><span class="line">VISC_UPDATE=on</span><br><span class="line">rheol=4                <span class="comment"># visvosity计算公式的选择，在Viscosity_structures.c中可查看</span></span><br><span class="line">TDEPV=on</span><br><span class="line">CHEMDEPV=off</span><br><span class="line"></span><br><span class="line">num_mat=4              <span class="comment"># Z方向地层物质分层数，一般设为4，即自地表至核幔边界认为存</span></span><br><span class="line">                       <span class="comment"># 在4层主要分层：岩石圈；岩石圈-410km；410km-660km；</span></span><br><span class="line">                       <span class="comment"># 660km-CMB。</span></span><br><span class="line"></span><br><span class="line">viscE=11.51293,11.51293,11.51293,11.51293 <span class="comment"># 活化能对viscosity影响系数</span></span><br><span class="line">viscZ=0.0,0.0,0.0,0.0                     <span class="comment"># 深度对viscosity影响系数</span></span><br><span class="line">viscT=0.0,0.0,0.0,0.0                     <span class="comment"># 温度对viscosity影响系数</span></span><br><span class="line">visc0=1.0e0,1.e0,1.e0,1.e0                </span><br><span class="line">VMIN=on visc_min=1.0e-4</span><br><span class="line">VMAX=on visc_max=1.0e04</span><br><span class="line"></span><br><span class="line"><span class="comment"># BOUNDARY CONDITIONS</span></span><br><span class="line"></span><br><span class="line">	topvbc=0		<span class="comment"># 速度边界条件顶部开关</span></span><br><span class="line">		topvbxval=0.0	<span class="comment"># 速度边界条件X方向值</span></span><br><span class="line">		topvbyval=0.0	<span class="comment"># 速度边界条件Y方向值</span></span><br><span class="line">	botvbc=0 	        <span class="comment"># 同上，不过为底部边界条件</span></span><br><span class="line">		botvbxval=0.0</span><br><span class="line">		botvbyval=0.0	</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">	toptbc=1 bottbc=1		<span class="comment"># 温度边界条件，顶部为0，底部为1，均为无量纲化温度</span></span><br><span class="line">	toptbcval=0.0 bottbcval=1.0	<span class="comment">#</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># DIMENSIONAL INFORMATION (BENCHMARK)</span></span><br><span class="line"></span><br><span class="line">	Ts=273                <span class="comment"># 表面量纲化温度，单位开尔文</span></span><br><span class="line">	ReferenceT=3000.0     <span class="comment"># CMB superadiabatic temperature in K </span></span><br><span class="line">	refvisc=5.0e21        <span class="comment"># 参考viscosity</span></span><br><span class="line">	density=3400.0        <span class="comment"># 密度</span></span><br><span class="line">	thermdiff=1.0e-4      <span class="comment"># 热扩散系数</span></span><br><span class="line">	gravacc=9.8           <span class="comment"># 重力梯度</span></span><br><span class="line">	thermexp=3.0e-5       <span class="comment">#热膨胀系数</span></span><br><span class="line">	cp=1200               <span class="comment"># 比热容</span></span><br><span class="line">	wdensity=0.0</span><br><span class="line">	layerd=2870.0 <span class="comment"># km    # 量钢化的box深度</span></span><br></pre></td></tr></table></figure></p>
 <h4><span id="rayleigh数设置">Rayleigh数设置</span></h4><p>rayleigh数是CitCom程序中重要的控制参数，其物理公式为：<br>$$Ra=\frac{\rho g\alpha\Delta TD^3}{\kappa\eta}$$<br>其中\(\rho\),g,\(\alpha\),\({\Delta}T\),D,\(\kappa\),\(\eta\)分别是密度，重力梯度，热膨胀系数，上下表面温差，box深度，热扩散系数，参考viscosity。<br>以case 1a为例，修改Ra=1e4即可。</p>
 <h4><span id="分辨率设置">分辨率设置</span></h4><p>分辨率设置主要影响计算可信度和计算效率，以Z方向为例分辨率设置参数nz,mgunitz,leves要满足公式：<br>$$nz=mgunitz*2^{levels-1}+1$$</p>
-<h4><span id="viscosity设置">Viscosity设置</span></h4><p>在viscosity_structures.c文件中有多个viscosity计算公式可供选择，可通过改变’rheol’的值改变选择的viscosity公式，以最简单的受温、压影响的viscosity公式：<br>$$\eta=\eta_0*exp(visE*(viscT-T))$$<br>可通过修改visc0，viscT，viscE参数改变viscosity剖面。对于case 2需要修改viscosity参数，根据文章给定的参数进行修改。</p>
+<h4><span id="viscosity设置">Viscosity设置</span></h4><p>在viscosity_structures.c文件中有多个viscosity计算公式可供选择，可通过改变’rheol’的值改变选择的viscosity公式，以最简单的受温、压影响的viscosity公式：<br>$$\eta=\eta_0*exp(viscE*(viscT-T))$$<br>可通过修改visc0，viscT，viscE参数改变viscosity剖面。对于case 2需要修改viscosity参数，根据文章给定的参数进行修改。</p>
 <h4><span id="量纲化参数设置">量纲化参数设置</span></h4><p>根据文章中Table1中修改ReferenceT，refvisc，density，thermdiff，thermexp，layerd等参数。</p>
 <h2><span id="运行citcom">运行CitCom</span></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当前目录</span></span><br><span class="line">$ <span class="built_in">pwd</span></span><br><span class="line">/home/shen/benchmark_test/Test</span><br><span class="line"></span><br><span class="line"><span class="comment"># citcom.x在"/home/shen/benchmark_test/"中</span></span><br><span class="line"><span class="comment"># input_example在"/home/shen/benchmark_test/Test"中</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建结果文件夹</span></span><br><span class="line">$ mkdir CASE_test</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行程序</span></span><br><span class="line">$ nohup ../citcom.x ./input_example &amp;</span><br></pre></td></tr></table></figure>
 <p>运行上面的命令后程序就在运行中，可在生成的”nohup.out”文件查看运行日志。</p>
@@ -185,15 +185,15 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
+  <strong class="toc-title">Contents</strong>
   <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text"><span id="&#x51C6;&#x5907;">&#x51C6;&#x5907;</span></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text"><span id="citcom&#x4EE3;&#x7801;&#x7F16;&#x8BD1;">CitCom&#x4EE3;&#x7801;&#x7F16;&#x8BD1;</span></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"><span id="input&#x6587;&#x4EF6;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;">input&#x6587;&#x4EF6;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;</span></span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.0.1.</span> <span class="toc-text"><span id="rayleigh&#x6570;&#x8BBE;&#x7F6E;">Rayleigh&#x6570;&#x8BBE;&#x7F6E;</span></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.0.2.</span> <span class="toc-text"><span id="&#x5206;&#x8FA8;&#x7387;&#x8BBE;&#x7F6E;">&#x5206;&#x8FA8;&#x7387;&#x8BBE;&#x7F6E;</span></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.0.3.</span> <span class="toc-text"><span id="viscosity&#x8BBE;&#x7F6E;">Viscosity&#x8BBE;&#x7F6E;</span></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.0.4.</span> <span class="toc-text"><span id="&#x91CF;&#x7EB2;&#x5316;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;">&#x91CF;&#x7EB2;&#x5316;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;</span></span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text"><span id="&#x8FD0;&#x884C;citcom">&#x8FD0;&#x884C;CitCom</span></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text"><span id="&#x8FD0;&#x884C;&#x7ED3;&#x679C;">&#x8FD0;&#x884C;&#x7ED3;&#x679C;</span></span></a></li></ol>
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 <div id="authorInfo">
 	
@@ -210,7 +210,7 @@
 
   
 <div class="categorieslist">
-	<p class="asidetitle">分类</p>
+	<p class="asidetitle">Categories</p>
 		<ul>
 		
 			<li><a href="/categories/CitCom/" title="CitCom">CitCom<sup>1</sup></a></li>
@@ -223,7 +223,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			<li><a href="/tags/benchmark/" title="benchmark">benchmark<sup>1</sup></a></li>
@@ -244,12 +244,12 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">标签云</p>
+    <p class="asidetitle">Tag Cloud</p>
     <div class="tagcloudlist clearfix">
        <a href="/tags/benchmark/" style="font-size: 10px;">benchmark</a> <a href="/tags/参数设置/" style="font-size: 10px;">参数设置</a>
     </div>
