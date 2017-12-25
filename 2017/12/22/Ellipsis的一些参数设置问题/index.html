@@ -14,7 +14,8 @@
     
     <meta name="description" content="在Ellipsis中考虑岩石圈和地幔为粘-弹-塑性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：
 
-ε_ij˙=12Gs_ij˙+12ηs_ij\dot{\varepsilon\_{ij}}=\frac{1}{2G}\dot{s\_{ij}}+\frac{1}{2\et">
+$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}+\frac{1}{2\eta}s_{ij}$$ 
+其中\(\dot{\">
     
     
     
@@ -48,7 +49,7 @@
 				<h1 class="site-name"><a href="/" title="Geodynamics">Geodynamics</a></h1>
 				<a class="blog-motto">We are all in the gutter, but some of us are looking at the stars.</a>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -102,7 +103,7 @@
     </p>
   <p class="article-time">
     <time datetime="2017-12-22T14:52:27.000Z" itemprop="datePublished">2017-12-22</time>
-    Updated:<time datetime="2017-12-23T13:10:57.080Z" itemprop="dateModified">2017-12-23</time>
+    更新日期:<time datetime="2017-12-23T13:10:57.080Z" itemprop="dateModified">2017-12-23</time>
     
   </p>
 </header>
@@ -110,62 +111,41 @@
 		
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 		</div>
 		
 		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
 <p>在Ellipsis中考虑岩石圈和地幔为<em>粘-弹-塑</em>性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：</p>
 <blockquote>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>ε</mi><mi mathvariant="normal">_</mi><mrow><mi>i</mi><mi>j</mi></mrow></mrow><mo>˙</mo></mover><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>G</mi></mrow></mfrac><mover accent="true"><mrow><mi>s</mi><mi mathvariant="normal">_</mi><mrow><mi>i</mi><mi>j</mi></mrow></mrow><mo>˙</mo></mover><mo>+</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>η</mi></mrow></mfrac><mi>s</mi><mi mathvariant="normal">_</mi><mrow><mi>i</mi><mi>j</mi></mrow></mrow><annotation encoding="application/x-tex">\dot{\varepsilon\_{ij}}=\frac{1}{2G}\dot{s\_{ij}}+\frac{1}{2\eta}s\_{ij}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.32144em;"></span><span class="strut bottom" style="height:2.20188em;vertical-align:-0.8804400000000001em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit">ε</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord displaystyle textstyle cramped"><span class="mord mathit">i</span><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-0.2285199999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>˙</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span><span class="mord mathit">G</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord displaystyle textstyle cramped"><span class="mord mathit">s</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord displaystyle textstyle cramped"><span class="mord mathit">i</span><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span><span style="top:-0.2285199999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>˙</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mbin">+</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.6860000000000002em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathrm">2</span><span class="mord mathit" style="margin-right:0.03588em;">η</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mord mathit">s</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord displaystyle textstyle uncramped"><span class="mord mathit">i</span><span class="mord mathit" style="margin-right:0.05724em;">j</span></span></span></span></span></span></p>
-</blockquote>
-<blockquote>
+<p>$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}+\frac{1}{2\eta}s_{ij}$$ </p>
 <p>其中\(\dot{\varepsilon_{ij}}\),\(\dot{s_{ij}}\),\(s_{ij}\),以及G和\(\eta\)分别代表应变率，偏应力随时间变化，偏应力，剪切模量以及粘滞度。</p>
 </blockquote>
 <p>非牛顿体模型中剪切应力与剪切应变率之间呈非线性关系。即：</p>
 <blockquote>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ε</mi><mo>=</mo><mi>A</mi><msup><mi>τ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\varepsilon=A\tau^n
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.7143919999999999em;"></span><span class="strut bottom" style="height:0.7143919999999999em;vertical-align:0em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">ε</span><span class="mrel">=</span><span class="mord mathit">A</span><span class="mord"><span class="mord mathit" style="margin-right:0.1132em;">τ</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathit">n</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></p>
+<p>$$\varepsilon=A\tau^n$$</p>
+<p>其中\(\varepsilon\)是应变率，\(\tau\)是偏应力，A是与颗粒大小及含水量相关系数，指数n为3左右。当n=1时变为牛顿流体。因此我们在Ellipsis中参数设置n时一般为3.05或3.5。<br>这个参数同样也影响着粘滞度结构：</p>
 </blockquote>
+<p>$$\eta=\eta_0({\frac{\dot{\varepsilon}_{\Pi}}{\dot{\varepsilon_0}}})^{\left( \frac{1}{n}-1 \right)}exp[\frac{E}{nR}(\frac{1}{T}-\frac{1}{T_0})]$$</p>
 <blockquote>
-<p>其中\(\varepsilon\)是应变率，\(\tau\)是偏应力，A是与颗粒大小及含水量相关系数，指数n为3左右。当n=1时变为牛顿流体。因此我们在Ellipsis中参数设置n时一般为3.05或3.5。<br>
-这个参数同样也影响着粘滞度结构：</p>
-</blockquote>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>η</mi><mo>=</mo><mi>η</mi><mi mathvariant="normal">_</mi><mn>0</mn><mo>(</mo><mrow><mfrac><mrow><mover accent="true"><mrow><mi>ε</mi></mrow><mo>˙</mo></mover><mi mathvariant="normal">_</mi><mrow><mi mathvariant="normal">Π</mi></mrow></mrow><mrow><mover accent="true"><mrow><mi>ε</mi><mi mathvariant="normal">_</mi><mn>0</mn></mrow><mo>˙</mo></mover></mrow></mfrac></mrow><msup><mo>)</mo><mrow><mrow><mo fence="true">(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><mo>−</mo><mn>1</mn><mo fence="true">)</mo></mrow></mrow></msup><mi>e</mi><mi>x</mi><mi>p</mi><mo>[</mo><mfrac><mrow><mi>E</mi></mrow><mrow><mi>n</mi><mi>R</mi></mrow></mfrac><mo>(</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>T</mi></mrow></mfrac><mo>−</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>T</mi><mi mathvariant="normal">_</mi><mn>0</mn></mrow></mfrac><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">\eta=\eta\_0({\frac{\dot{\varepsilon}\_{\Pi}}{\dot{\varepsilon\_0}}})^{\left( \frac{1}{n}-1 \right)}exp[\frac{E}{nR}(\frac{1}{T}-\frac{1}{T\_0})]
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.38333em;"></span><span class="strut bottom" style="height:2.4646299999999997em;vertical-align:-1.0813em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">η</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.03588em;">η</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathrm">0</span><span class="mopen">(</span><span class="mord displaystyle textstyle uncramped"><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.7712999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">ε</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathrm">0</span></span></span><span style="top:-0.2134399999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>˙</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.7em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord accent"><span class="vlist"><span style="top:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="mord textstyle cramped"><span class="mord mathit">ε</span></span></span><span style="top:0em;margin-left:0.16668em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="accent-body"><span>˙</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord textstyle uncramped"><span class="mord mathrm">Π</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span><span class="mclose"><span class="mclose">)</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="minner scriptstyle uncramped"><span class="style-wrap reset-scriptstyle textstyle uncramped" style="top:0.07500000000000001em;">(</span><span class="mord reset-scriptstyle scriptstyle uncramped"><span class="sizing reset-size5 size5 reset-scriptstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-scriptstyle scriptscriptstyle cramped"><span class="mord scriptscriptstyle cramped"><span class="mord mathit">n</span></span></span></span><span style="top:-0.22142857142857142em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-scriptstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-scriptstyle scriptscriptstyle uncramped"><span class="mord scriptscriptstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-scriptstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">−</span><span class="mord mathrm">1</span><span class="style-wrap reset-scriptstyle textstyle uncramped" style="top:0.07500000000000001em;">)</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">​</span></span>​</span></span></span><span class="mord mathit">e</span><span class="mord mathit">x</span><span class="mord mathit">p</span><span class="mopen">[</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit">n</span><span class="mord mathit" style="margin-right:0.00773em;">R</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit" style="margin-right:0.05764em;">E</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mopen">(</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mbin">−</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.6859999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathrm">0</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">)</span><span class="mclose">]</span></span></span></span></span></p>
-<blockquote>
-<p>这里面\(\dot{\varepsilon_0}\)是参考应变率，在地球动力学的一些文献中一般为\(10<sup>{-15}s</sup>{-1}\)。E为活化能，R为气体常数。在软件中我们经过<a href="https://academic.oup.com/gji/article/173/2/693/2127937/%22Title%22" target="_blank" rel="noopener"><em>无量纲化</em> </a>后输入相应的值。</p>
+<p>这里面\(\dot{\varepsilon_0}\)是参考应变率，在地球动力学的一些文献中一般为\(10^{-15}s^{-1}\)。E为活化能，R为气体常数。在软件中我们经过<a href="https://academic.oup.com/gji/article/173/2/693/2127937/&quot;Title&quot;" target="_blank" rel="noopener"><em>无量纲化</em> </a>后输入相应的值。</p>
 </blockquote>
 <p>在考虑弹性形变时要考虑物质的屈服应力。在Drucker_Prager屈服模型中：</p>
 <blockquote>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>τ</mi><mi>y</mi></msub><mo>=</mo><mi>μ</mi><mi>P</mi><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">\tau_y=\mu P+C
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.1132em;">τ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.1132em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord mathit">μ</span><span class="mord mathit" style="margin-right:0.13889em;">P</span><span class="mbin">+</span><span class="mord mathit" style="margin-right:0.07153em;">C</span></span></span></span></span></p>
-</blockquote>
-<blockquote></blockquote>
+<p>$$\tau_y=\mu P+C$$</p>
 <p>\(\tau_y\),\(\mu\),P和 C 分别是屈服应力，摩擦系数，压力和内聚力。内聚力指在无正压力作用下材料的强度。因此我们可以看出这几个参数与材料的强度成正比关系。这都是在软件中调整材料软硬的重要指标。值得注意的是，当增加\(\mu\)时，由于在地球尺度下P的值可以达到十几的数量级，因此当改变摩擦系数时对于材料强度的改变是非常巨大的。一般在调整时我们选择对内聚力以及参考应变率等进行调整。</p>
-<blockquote>
 <p>其次，内聚力和摩擦系数也由下面两个公式决定。</p>
-</blockquote>
-<blockquote>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>μ</mi><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub><mo>[</mo><mn>1</mn><mo>−</mo><mi>m</mi><mi>i</mi><mi>n</mi><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mfrac><mrow><mi>ε</mi><mi mathvariant="normal">_</mi><mi>p</mi></mrow><mrow><mi>ε</mi><mi mathvariant="normal">_</mi><mi>f</mi></mrow></mfrac><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">\mu=\mu_0[1-min(1,\frac{\varepsilon\_p}{\varepsilon\_f})]
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.13056em;"></span><span class="strut bottom" style="height:2.12656em;vertical-align:-0.996em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">μ</span><span class="mrel">=</span><span class="mord"><span class="mord mathit">μ</span><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle cramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mbin">−</span><span class="mord mathit">m</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.6859999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit">ε</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.7em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit">ε</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit">p</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">)</span><span class="mclose">]</span></span></span></span></span></p>
-</blockquote>
-<blockquote>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi><mo>=</mo><mi>C</mi><mi mathvariant="normal">_</mi><mi>f</mi><mo>+</mo><mo>(</mo><mi>C</mi><mi mathvariant="normal">_</mi><mn>0</mn><mo>−</mo><mi>C</mi><mi mathvariant="normal">_</mi><mi>f</mi><mo>)</mo><mo>[</mo><mn>1</mn><mo>−</mo><mi>m</mi><mi>i</mi><mi>n</mi><mo>(</mo><mn>1</mn><mo separator="true">,</mo><mfrac><mrow><mi>ε</mi><mi mathvariant="normal">_</mi><mi>p</mi></mrow><mrow><mi>ε</mi><mi mathvariant="normal">_</mi><mi>f</mi></mrow></mfrac><mo>)</mo><mo>]</mo></mrow><annotation encoding="application/x-tex">C=C\_f+(C\_0-C\_f)[1-min(1,\frac{\varepsilon\_p}{\varepsilon\_f})]
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.13056em;"></span><span class="strut bottom" style="height:2.12656em;vertical-align:-0.996em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mbin">+</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathrm">0</span><span class="mbin">−</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mopen">[</span><span class="mord mathrm">1</span><span class="mbin">−</span><span class="mord mathit">m</span><span class="mord mathit">i</span><span class="mord mathit">n</span><span class="mopen">(</span><span class="mord mathrm">1</span><span class="mpunct">,</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.6859999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit">ε</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit" style="margin-right:0.10764em;">f</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.7em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathit">ε</span><span class="mord mathrm" style="margin-right:0.02778em;">_</span><span class="mord mathit">p</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mclose">)</span><span class="mclose">]</span></span></span></span></span></p>
-</blockquote>
-<blockquote>
+<p>$$\mu=\mu_0[1-min(1,\frac{\varepsilon_p}{\varepsilon_f})]$$</p>
+<p>$$C=C_f+(C_0-C_f)[1-min(1,\frac{\varepsilon_p}{\varepsilon_f})]$$</p>
 <p>这里面要强调的是\(\varepsilon_f\)这个参数，当参考应变率越大时，会影响\(\mu\)和C变大，因此也会影响材料的强度变强。</p>
 </blockquote>
 <p>这是几个目前我认为的比较值得注意的参数，了解这几个参数对于学习Ellipsis程序比较有用。</p>
-<p><em><strong>Reference</strong></em></p>
+<p><strong><em>Reference</em></strong></p>
 <ul>
 <li><a href="http://onlinelibrary.wiley.com/doi/10.1029/2011GC003877/full" target="_blank" rel="noopener">Leng, W., and M. Gurnis (2011),Dynamics of subduction initiation with different evolutionary pathways,Geochem.Geophys.Geosyst.</a></li>
 </ul>
-<p><em>在写文章时的一点想法</em><br>
-<em>GitHub上并不支持LaTex语言，因此所有直接输入的LaTex公式都不能直接显示，因此要借助codecogs等的云服务来在线生成公式。目前内心毫无波动…</em><br>
-<em>此外，即使你用云服务器生成的公式图片也只能单独一行显示。毫无波动到无法呼吸。因此只能换成MathJax引擎渲染。但是！还要注意每行不能出现超过一个下划线，因此当出现超过一个下划线是要用转义字符,内心再一次毫无波动…</em></p>
+<p><em>在写文章时的一点想法</em><br><em>GitHub上并不支持LaTex语言，因此所有直接输入的LaTex公式都不能直接显示，因此要借助codecogs等的云服务来在线生成公式。目前内心毫无波动……</em><br><em>此外，即使你用云服务器生成的公式图片也只能单独一行显示。毫无波动到无法呼吸。因此只能换成MathJax引擎渲染。但是！还要注意每行不能出现超过一个下划线，因此当出现超过一个下划线是要用转义字符,内心再一次毫无波动……</em></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -222,15 +202,15 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
   
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 <div id="authorInfo">
 	
@@ -247,7 +227,7 @@
 
   
 <div class="categorieslist">
-	<p class="asidetitle">Categories</p>
+	<p class="asidetitle">分类</p>
 		<ul>
 		
 			<li><a href="/categories/CitCom/" title="CitCom">CitCom<sup>1</sup></a></li>
@@ -260,7 +240,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			<li><a href="/tags/benchmark/" title="benchmark">benchmark<sup>1</sup></a></li>
@@ -281,12 +261,12 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">Tag Cloud</p>
+    <p class="asidetitle">标签云</p>
     <div class="tagcloudlist clearfix">
        <a href="/tags/benchmark/" style="font-size: 10px;">benchmark</a> <a href="/tags/参数设置/" style="font-size: 10px;">参数设置</a>
     </div>
