@@ -12,8 +12,7 @@
     
     <meta name="author" content="NPC">
     
-    <meta name="description" content="###Parameters###
-Prandlt number这是一个与瑞雷数相似的无量纲的量，表征流体流动中动量交换与热交换相对重要性的一个参数。表明温度边界层和流动边界层的关系，反映流体物理性质对对流传热过程的影响。记为Pr。它的表达式为：$$ Pr=\frac{\nu}{\alpha}=\fr">
+    <meta name="description" content="ParametersPrandlt number这是一个与瑞雷数相似的无量纲的量，表征流体流动中动量交换与热交换相对重要性的一个参数。表明温度边界层和流动边界层的关系，反映流体物理性质对对流传热过程的影响。记为Pr。它的表达式为：$$ Pr=\frac{\nu}{\alpha}=\frac{\mu{">
     
     
     
@@ -101,7 +100,7 @@ Prandlt number这是一个与瑞雷数相似的无量纲的量，表征流体流
     </p>
   <p class="article-time">
     <time datetime="2018-03-12T09:11:24.000Z" itemprop="datePublished">2018-03-12</time>
-    Updated:<time datetime="2018-03-12T09:27:07.784Z" itemprop="dateModified">2018-03-12</time>
+    Updated:<time datetime="2018-03-12T09:32:39.251Z" itemprop="dateModified">2018-03-12</time>
     
   </p>
 </header>
@@ -110,23 +109,22 @@ Prandlt number这是一个与瑞雷数相似的无量纲的量，表征流体流
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
-		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text"><span id="mantle-convection-simulation">Mantle Convection Simulation</span></span></a></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text"><span id="parameters">Parameters</span></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text"><span id="applications">Applications</span></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"><span id="mantle-convection-simulation">Mantle Convection Simulation</span></span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.1.</span> <span class="toc-text"><span id="links">links</span></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.</span> <span class="toc-text"><span id="reference">reference</span></span></a></li></ol></li></ol>
 		</div>
 		
 		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-<p>###Parameters###</p>
-<p><font size="3"><em>Prandlt number</em></font><br><br>这是一个与瑞雷数相似的无量纲的量，表征流体流动中动量交换与热交换相对重要性的一个参数。表明温度边界层和流动边界层的关系，反映流体物理性质对对流传热过程的影响。记为Pr。<br>它的表达式为：<br>$$ Pr=\frac{\nu}{\alpha}=\frac{\mu{C_p}}{\kappa} $$</p>
+<h3><span id="parameters">Parameters</span></h3><p><font size="3"><em>Prandlt number</em></font><br><br>这是一个与瑞雷数相似的无量纲的量，表征流体流动中动量交换与热交换相对重要性的一个参数。表明温度边界层和流动边界层的关系，反映流体物理性质对对流传热过程的影响。记为Pr。<br>它的表达式为：<br>$$ Pr=\frac{\nu}{\alpha}=\frac{\mu{C_p}}{\kappa} $$</p>
 <p>其中,\(\mu\)为粘度,\(C_{p}\)为等压比热容，\(\kappa\)为热导率，\(\alpha\)为热扩散系数，\(\nu\)为运动粘度。参考wikipedia的相关词条，普朗特常数表示动量扩散系数\(\alpha\)（\(\frac{\mu}{\rho}\)）与温度扩散系数的比值。</p>
-<p>###Applications###<br>根据Louis Moresi et al.(2002)在地球动力学的数值模拟过程中，将地球看成不可压缩的具有粘弹性值得麦克斯维尔流体。其具有有限的Prandlt number值。温度对于动力影响十分重要，因此考虑由于温度的变化引起的密度差异来作为受力方程：<br>$$ \nabla\cdot\tau-\nabla{p}=g\rho_0(1-\alpha_T{T})\hat{z}  $$</p>
+<h3><span id="applications">Applications</span></h3><p>根据Louis Moresi et al.(2002)在地球动力学的数值模拟过程中，将地球看成不可压缩的具有粘弹性值得麦克斯维尔流体。其具有有限的Prandlt number值。温度对于动力影响十分重要，因此考虑由于温度的变化引起的密度差异来作为受力方程：<br>$$ \nabla\cdot\tau-\nabla{p}=g\rho_0(1-\alpha_T{T})\hat{z}  $$</p>
 <p>其中,\(\tau\)为应力,g为重力加速度，\(\rho_0\)为参考温度下物质密度，\(\alpha\)为热扩散系数，\(\hat{z}\)为速度方向的单位矢量。</p>
 <p>Louis Moresi et al.(2002)在提出粘弹性物质的数值解法后将上式用应变率以及有效粘滞度等参数改为：</p>
 <p>$$ \nabla (\eta_{eff}{D^{t+\Delta{t^e}}})-\nabla p=g\rho_0(1-\alpha_T{T})\hat{z}-\nabla(\eta_{eff}[\frac{\tau_t}{\mu{\Delta{t^e}}}+\frac{W^t{\tau^t}}{\mu}-\frac{\tau^t{W^t}}{\mu}]) $$</p>
 <p>这个式子的具体得出过程可见Louis Moresi et al.(2002)文章中给出的公式。其基本想法就是利用迭代方法通过t时刻的速度场以及压力求得t+\(\Delta{t^e}\)时刻的值。上面公式中其他参数均为已知参数。<br>在地球动力学中驱动力来源自内部的生热。因此温度的变化由热量在流体内部的扩散情况来决定。<br>$$ \frac{DT}{Dt}=-\kappa{\Delta^2}T $$<br>其中\(\kappa\)为该物体中热扩散系数。<br>对于数值模拟中的流变特性采用粘滞度来描述地幔的形变特征，KARATO和Wu（1993)给出了下面的粘度公式：<br>$$ \eta=\frac{1}{2A}{(\frac{\mu}{\tau})}^{n-1}{(\frac{b^*}{h})}^m{exp\frac{E^*+PV^*}{RT}}  $$<br>其中，A是常数，\(\mu\)为剪切模量，\(b^*\)为伯格斯矢量，h是颗粒大小，n是应力指数，m是颗粒大小指数。可以看出粘度的主要影响参数是温度。且当假定剪切模量的大小不随温度而改变时可以直接简化为:<br>$$ \eta=A^\prime{exp(-CT)} $$  </p>
 <h3><span id="mantle-convection-simulation">Mantle Convection Simulation</span></h3><p>根据以上理论，Louis Moresi et al.(2002)进行简单的数值模拟计算研究了地幔俯冲板块在弹性与粘弹性两种情况下的不同的形变情况。<br><img src="http://t1.aixinxi.net/o_1c8bn4cb51hham4k158519u49f5a.png-w.jpg"> </p>
 <p><center>如图(a,b)为温度场分布，(c)为积累应力的大小。其中a不考虑弹性形变。图中黄色的区域表示达到屈服应力后高应变率的部分。Louis Moresi et al.(2002) </center><br>对比发现弹性形变的加入导致俯冲板块形态存在更强的后撤能力。而只考虑粘性形变的话倾向于前滚（roll forward)。在地球内部由于粘度较高，此时弹性性质很小可以省略，即当温度很高时，地幔的物质失去弹性性质。</p>
-<p>####links<br><a href="https://en.wikipedia.org/wiki/Viscoelasticity" target="_blank" rel="noopener">viscoelasticity</a><br><a href="https://en.wikipedia.org/wiki/Viscoplasticity" target="_blank" rel="noopener">viscoplasticity</a><br><a href="https://en.wikipedia.org/wiki/Prandtl_number" target="_blank" rel="noopener">Prandlt number</a>  </p>
-<p>####reference####<br><a href="https://hal.archives-ouvertes.fr/hal-01620839/document" target="_blank" rel="noopener">Moresi, Louis, Frédéric Dufour, and H-B. Mühlhaus. “Mantle convection modeling with viscoelastic/brittle lithosphere: Numerical methodology and plate tectonic modeling.” Pure and Applied Geophysics 159.10 (2002): 2335-2356.</a>  </p>
+<h4><span id="links">links</span></h4><p><a href="https://en.wikipedia.org/wiki/Viscoelasticity" target="_blank" rel="noopener">viscoelasticity</a><br><a href="https://en.wikipedia.org/wiki/Viscoplasticity" target="_blank" rel="noopener">viscoplasticity</a><br><a href="https://en.wikipedia.org/wiki/Prandtl_number" target="_blank" rel="noopener">Prandlt number</a>  </p>
+<h4><span id="reference">reference</span></h4><p><a href="https://hal.archives-ouvertes.fr/hal-01620839/document" target="_blank" rel="noopener">Moresi, Louis, Frédéric Dufour, and H-B. Mühlhaus. “Mantle convection modeling with viscoelastic/brittle lithosphere: Numerical methodology and plate tectonic modeling.” Pure and Applied Geophysics 159.10 (2002): 2335-2356.</a>  </p>
 <p><font size="2"><em>这篇博客纯粹是我在读文章时的一点理解，当时觉得写出来更便于自己记忆理解，因此稍作整理一下。部分内容完全是自己看文章时的一些理解，并不能保证完全正确。仅希望能给碰巧看到这篇博文的人一点点微末的帮助就已经达到目的。如有进一步理解的需要，可直接读链接中的原文。</em></font><br></p>
   
 	</div>
@@ -180,7 +178,7 @@ Prandlt number这是一个与瑞雷数相似的无量纲的量，表征流体流
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text"><span id="mantle-convection-simulation">Mantle Convection Simulation</span></span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text"><span id="parameters">Parameters</span></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text"><span id="applications">Applications</span></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"><span id="mantle-convection-simulation">Mantle Convection Simulation</span></span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.1.</span> <span class="toc-text"><span id="links">links</span></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.</span> <span class="toc-text"><span id="reference">reference</span></span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
