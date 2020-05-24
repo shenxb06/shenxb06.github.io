@@ -100,7 +100,7 @@
     </p>
   <p class="article-time">
     <time datetime="2017-12-24T05:22:11.000Z" itemprop="datePublished">2017-12-24</time>
-    Updated:<time datetime="2018-06-14T07:27:38.481Z" itemprop="dateModified">2018-06-14</time>
+    Updated:<time datetime="2020-05-24T13:52:45.603Z" itemprop="dateModified">2020-05-24</time>
     
   </p>
 </header>
@@ -131,9 +131,11 @@
 <p>按照上述方法，修改相应参数，重复出Case1a，Case1b，Case1C，Case2a，Case2b结果。</p>
 <h2><span id="输出文件格式">输出文件格式</span></h2><p>CitCom输出文件主要包括：log,coord,ave,temp,heating等文件。<br>文件命名规则：”filename.timestep”,例如：“ave.1000”代表第1000步计算输出的ave文件。<br>log文件主要是文件计算运行过程中输出的信息；<br>coord文件主要是坐标参数等信息；<br>temp文件主要是温度、粘度、不同方向速度信息；<br>ave文件主要是温度、速度，粘度、密度等各个参数水平均值信息，绘制各参数随Z方向变化曲线图数据即从该文件中提取，故仅详细介绍ave文件内容格式：</p>
 <p>ave文件：（以X,Z分辨率nx，nz为例）注：参数值均为无量纲化值<br>第1行：nz timestep time 表面热流(Nu值) 底面热流 放射性生热量 底部温度边界条件开关<br>第2至nz+1行(前5列)：Z方向坐标 水平平均温度 水平平均速度 水平平均粘度 水平平均密度<br>第nz+2至nz+nx+1行：X方向坐标及box表面各个参数值<br>第nz+nx+2行：略</p>
-<h2><span id="运行结果">运行结果</span></h2><p>从运行结果文件中提取Nu、velo等参数，利用GMT绘制图件，并与文章中给出结果进行对比，误差在3%以内则基本运行正确。<br>Case1:<br><img src="http://t1.aixinxi.net/o_1ceq7n7l31l4nf7g1bg06u5h8ba.png-w.jpg" style="zoom:50%"><br><img src="http://t1.aixinxi.net/o_1ceq7phff1jtq6fh4o3csvghta.png-w.jpg" style="zoom:50%"><br><img src="http://t1.aixinxi.net/o_1ceq7qgek15resvcfac10q711fra.png-w.jpg" style="zoom:50%"><br><img src="http://t1.aixinxi.net/o_1ceq7rc5v1teqs9p13vkcpa4u6a.png-w.jpg" style="zoom:50%"><br><img src="http://t1.aixinxi.net/o_1ceq838fpdck1l41173g14sn5lfa.png-w.jpg" style="zoom:50%"></p>
-<p>Case2:<br><img src="http://t1.aixinxi.net/o_1ceq80ri4ipgcai1v4esvsd39a.png-w.jpg" style="zoom:50%"><br><img src="http://t1.aixinxi.net/o_1ceq81rea1kcd17k1bgq4ujmk8a.png-w.jpg" style="zoom:50%"><br><img src="http://t1.aixinxi.net/o_1ceq84mne1c9v2ta1gn5sni5kca.png-w.jpg" style="zoom:50%"><br><img src="http://t1.aixinxi.net/o_1ceq890i810ti9b24fsc8817dca.png-w.jpg" style="zoom:50%"></p>
-<p>Ra~Nu,Ra~Vrm关系的定量化计算结果<br><img src="http://t1.aixinxi.net/o_1cfuicthr1vrm6gs1n8hevm3gka.png-w.jpg"><br>$$Nu{\sim}Ra^{\frac{1}{3}}$$<br><img src="http://t1.aixinxi.net/o_1cfugrnkmmmc1cn9hd1jbgocqa.png-w.jpg"><br>$$Vrms{\sim}Ra^{\frac{2}{3}}$$<br><img src="http://t1.aixinxi.net/o_1cfugqqi7neh1567llj1vqsa28a.png-w.jpg"></p>
+<h2><span id="运行结果">运行结果</span></h2><p>从运行结果文件中提取Nu、velo等参数，利用GMT绘制图件，并与文章中给出结果进行对比，误差在3%以内则基本运行正确。<br>Case1:</p>
+<p>Case2:</p>
+<p>Ra~Nu,Ra~Vrm关系的定量化计算结果</p>
+<p>$$Nu{\sim}Ra^{\frac{1}{3}}$$</p>
+<p>$$Vrms{\sim}Ra^{\frac{2}{3}}$$</p>
 <p><strong><em>Reference</em></strong><br><a href="http://www.ldeo.columbia.edu/~mspieg/e4301/Reading/Blankenbach_etal_GJI_1989.pdf" target="_blank" rel="noopener">Blankenbach, B., et al. “A benchmark comparison for mantle convection codes.” Geophysical Journal International 98.1 (1989): 23-38.</a></p>
   
 	</div>
@@ -270,7 +272,7 @@
     </div>
     <footer><div id="footer" >
     
-            <p class="copyright"> © 2018 
+            <p class="copyright"> © 2020 
 		
 		<a href="http://shenxb06.github.io" target="_blank" title="NPC">NPC</a>
 		
