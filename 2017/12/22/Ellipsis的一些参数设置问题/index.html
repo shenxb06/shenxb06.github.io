@@ -14,8 +14,7 @@
     
     <meta name="description" content="在Ellipsis中考虑岩石圈和地幔为粘-弹-塑性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：
 
-$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}+\frac{1}{2\eta}s_{ij}$$ 
-其中\(\dot{\">
+\dot{\varepsilon\_{ij}}=\frac{1}{2G}\dot{s\_{ij}}+\frac{1}{2\eta}s\_{ij}其中\(\dot{\var">
     
     
     
@@ -119,26 +118,20 @@ $$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}+\frac{1}{2\eta}s_{ij}$$
 
 <p>在Ellipsis中考虑岩石圈和地幔为<em>粘-弹-塑</em>性的不可压缩的麦克斯维尔体。其应变率包含弹性与粘性两个部分。应变率可以表示为：</p>
 <blockquote>
-<p>$$\dot{\varepsilon_{ij}}=\frac{1}{2G}\dot{s_{ij}}+\frac{1}{2\eta}s_{ij}$$ </p>
-<p>其中\(\dot{\varepsilon_{ij}}\),\(\dot{s_{ij}}\),\(s_{ij}\),以及G和\(\eta\)分别代表应变率，偏应力随时间变化，偏应力，剪切模量以及粘滞度。</p>
+<script type="math/tex; mode=display">\dot{\varepsilon\_{ij}}=\frac{1}{2G}\dot{s\_{ij}}+\frac{1}{2\eta}s\_{ij}</script><p>其中\(\dot{\varepsilon_{ij}}\),\(\dot{s_{ij}}\),\(s_{ij}\),以及G和\(\eta\)分别代表应变率，偏应力随时间变化，偏应力，剪切模量以及粘滞度。</p>
 </blockquote>
 <p>非牛顿体模型中剪切应力与剪切应变率之间呈非线性关系。即：</p>
 <blockquote>
-<p>$$\varepsilon=A\tau^n$$</p>
-<p>其中\(\varepsilon\)是应变率，\(\tau\)是偏应力，A是与颗粒大小及含水量相关系数，指数n为3左右。当n=1时变为牛顿流体。因此我们在Ellipsis中参数设置n时一般为3.05或3.5。<br>这个参数同样也影响着粘滞度结构：</p>
+<script type="math/tex; mode=display">\varepsilon=A\tau^n</script><p>其中\(\varepsilon\)是应变率，\(\tau\)是偏应力，A是与颗粒大小及含水量相关系数，指数n为3左右。当n=1时变为牛顿流体。因此我们在Ellipsis中参数设置n时一般为3.05或3.5。<br>这个参数同样也影响着粘滞度结构：</p>
 </blockquote>
-<p>$$\eta=\eta_0({\frac{\dot{\varepsilon}_{\Pi}}{\dot{\varepsilon_0}}})^{\left( \frac{1}{n}-1 \right)}exp[\frac{E}{nR}(\frac{1}{T}-\frac{1}{T_0})]$$</p>
-<blockquote>
+<script type="math/tex; mode=display">\eta=\eta\_0({\frac{\dot{\varepsilon}\_{\Pi}}{\dot{\varepsilon\_0}}})^{\left( \frac{1}{n}-1 \right)}exp[\frac{E}{nR}(\frac{1}{T}-\frac{1}{T\_0})]</script><blockquote>
 <p>这里面\(\dot{\varepsilon_0}\)是参考应变率，在地球动力学的一些文献中一般为\(10^{-15}s^{-1}\)。E为活化能，R为气体常数。在软件中我们经过<a href="https://academic.oup.com/gji/article/173/2/693/2127937/&quot;Title&quot;" target="_blank" rel="noopener"><em>无量纲化</em> </a>后输入相应的值。</p>
 </blockquote>
 <p>在考虑弹性形变时要考虑物质的屈服应力。在Drucker_Prager屈服模型中：</p>
 <blockquote>
-<p>$$\tau_y=\mu P+C$$</p>
-<p>\(\tau_y\),\(\mu\),P和 C 分别是屈服应力，摩擦系数，压力和内聚力。内聚力指在无正压力作用下材料的强度。因此我们可以看出这几个参数与材料的强度成正比关系。这都是在软件中调整材料软硬的重要指标。值得注意的是，当增加\(\mu\)时，由于在地球尺度下P的值可以达到十几的数量级，因此当改变摩擦系数时对于材料强度的改变是非常巨大的。一般在调整时我们选择对内聚力以及参考应变率等进行调整。</p>
+<script type="math/tex; mode=display">\tau_y=\mu P+C</script><p>\(\tau_y\),\(\mu\),P和 C 分别是屈服应力，摩擦系数，压力和内聚力。内聚力指在无正压力作用下材料的强度。因此我们可以看出这几个参数与材料的强度成正比关系。这都是在软件中调整材料软硬的重要指标。值得注意的是，当增加\(\mu\)时，由于在地球尺度下P的值可以达到十几的数量级，因此当改变摩擦系数时对于材料强度的改变是非常巨大的。一般在调整时我们选择对内聚力以及参考应变率等进行调整。</p>
 <p>其次，内聚力和摩擦系数也由下面两个公式决定。</p>
-<p>$$\mu=\mu_0[1-min(1,\frac{\varepsilon_p}{\varepsilon_f})]$$</p>
-<p>$$C=C_f+(C_0-C_f)[1-min(1,\frac{\varepsilon_p}{\varepsilon_f})]$$</p>
-<p>这里面要强调的是\(\varepsilon_f\)这个参数，当参考应变率越大时，会影响\(\mu\)和C变大，因此也会影响材料的强度变强。</p>
+<script type="math/tex; mode=display">\mu=\mu_0[1-min(1,\frac{\varepsilon\_p}{\varepsilon\_f})]</script><script type="math/tex; mode=display">C=C\_f+(C\_0-C\_f)[1-min(1,\frac{\varepsilon\_p}{\varepsilon\_f})]</script><p>这里面要强调的是\(\varepsilon_f\)这个参数，当参考应变率越大时，会影响\(\mu\)和C变大，因此也会影响材料的强度变强。</p>
 </blockquote>
 <p>这是几个目前我认为的比较值得注意的参数，了解这几个参数对于学习Ellipsis程序比较有用。</p>
 <p><strong><em>Reference</em></strong></p>
