@@ -103,7 +103,7 @@
     </p>
   <p class="article-time">
     <time datetime="2017-12-24T05:22:11.000Z" itemprop="datePublished">2017-12-24</time>
-    Updated:<time datetime="2023-05-27T11:51:40.221Z" itemprop="dateModified">2023-05-27</time>
+    Updated:<time datetime="2023-05-27T12:28:57.729Z" itemprop="dateModified">2023-05-27</time>
     
   </p>
 </header>
@@ -138,8 +138,8 @@
 <h3><span id="rayleigh数设置">Rayleigh数设置</span></h3><p>rayleigh数是CitCom程序中重要的控制参数，其物理公式为：</p>
 <script type="math/tex; mode=display">Ra=\frac{\rho g\alpha\Delta TD^3}{\kappa\eta}</script><p>其中\(\rho\),g,\(\alpha\),\({\Delta}T\),D,\(\kappa\),\(\eta\)分别是密度，重力梯度，热膨胀系数，上下表面温差，box深度，热扩散系数，参考viscosity。<br>以case 1a为例，修改Ra=1e4即可。</p>
 <h3><span id="分辨率设置">分辨率设置</span></h3><p>分辨率设置主要影响计算可信度和计算效率，以Z方向为例分辨率设置参数nz,mgunitz,levels要满足公式：</p>
-<script type="math/tex; mode=display">nz=mgunitz\*2^{levels-1}+1</script><h3><span id="viscosity设置">Viscosity设置</span></h3><p>在viscosity_structures.c文件中有多个viscosity计算公式可供选择，可通过改变’rheol’的值改变选择的viscosity公式，以最简单的受温、压影响的viscosity公式：</p>
-<script type="math/tex; mode=display">\eta=\eta_0\*exp(viscE\*(viscT-T))</script><p>可通过修改visc0，viscT，viscE参数改变viscosity剖面。对于case 2需要修改viscosity参数，根据文章给定的参数进行修改。</p>
+<script type="math/tex; mode=display">nz=mgunitz*2^{levels-1}+1</script><h3><span id="viscosity设置">Viscosity设置</span></h3><p>在viscosity_structures.c文件中有多个viscosity计算公式可供选择，可通过改变’rheol’的值改变选择的viscosity公式，以最简单的受温、压影响的viscosity公式：</p>
+<script type="math/tex; mode=display">\eta=\eta_0*exp(viscE*(viscT-T))</script><p>可通过修改visc0，viscT，viscE参数改变viscosity剖面。对于case 2需要修改viscosity参数，根据文章给定的参数进行修改。</p>
 <h3><span id="量纲化参数设置">量纲化参数设置</span></h3><p>根据文章中Table1中修改ReferenceT，refvisc，density，thermdiff，thermexp，layerd等参数。</p>
 <h2><span id="运行citcom">运行CitCom</span></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当前目录</span></span><br><span class="line">$ <span class="built_in">pwd</span></span><br><span class="line">/home/shen/benchmark_test/Test</span><br><span class="line"></span><br><span class="line"><span class="comment"># citcom.x在"/home/shen/benchmark_test/"中</span></span><br><span class="line"><span class="comment"># input_example在"/home/shen/benchmark_test/Test"中</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 新建结果文件夹</span></span><br><span class="line">$ mkdir CASE_test</span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行程序</span></span><br><span class="line">$ nohup ../citcom.x ./input_example &amp;</span><br></pre></td></tr></table></figure>
 <p>运行上面的命令后程序就在运行中，可在生成的”nohup.out”文件查看运行日志。</p>
