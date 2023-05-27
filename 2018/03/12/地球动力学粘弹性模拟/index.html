@@ -12,10 +12,11 @@
     
     <meta name="author" content="Xiaobing Shen, Miao Chen">
     
-    <meta name="description" content="MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;],
-            inlineMath: [[&#39;$&#39;,&#39;$">
+    <meta name="description" content="ParametersPrandlt number这是一个与瑞雷数相似的无量纲的量，表征流体流动中动量交换与热交换相对重要性的一个参数。表明温度边界层和流动边界层的关系，反映流体物理性质对对流传热过程的影响。记为Pr。它的表达式为：
+
+    
+    
+        MathJax.Hub.Con">
     
     
     
@@ -103,7 +104,7 @@
     </p>
   <p class="article-time">
     <time datetime="2018-03-12T09:11:24.000Z" itemprop="datePublished">2018-03-12</time>
-    Updated:<time datetime="2023-05-27T12:49:22.422Z" itemprop="dateModified">2023-05-27</time>
+    Updated:<time datetime="2023-05-27T13:17:17.608Z" itemprop="dateModified">2023-05-27</time>
     
   </p>
 </header>
@@ -115,7 +116,8 @@
 		<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text"><span id="parameters">Parameters</span></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text"><span id="applications">Applications</span></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text"><span id="mantle-convection-simulation">Mantle Convection Simulation</span></span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.1.</span> <span class="toc-text"><span id="links">links</span></span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#undefined"><span class="toc-number">3.2.</span> <span class="toc-text"><span id="reference">reference</span></span></a></li></ol></li></ol>
 		</div>
 		
-		<head>
+		<h3><span id="parameters">Parameters</span></h3><p><font size="3">Prandlt number</font><br><br>这是一个与瑞雷数相似的无量纲的量，表征流体流动中动量交换与热交换相对重要性的一个参数。表明温度边界层和流动边界层的关系，反映流体物理性质对对流传热过程的影响。记为Pr。<br>它的表达式为：</p>
+<head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -127,7 +129,7 @@
     </script>
 </head>
 
-<h3><span id="parameters">Parameters</span></h3><p><font size="3">Prandlt number</font><br><br>这是一个与瑞雷数相似的无量纲的量，表征流体流动中动量交换与热交换相对重要性的一个参数。表明温度边界层和流动边界层的关系，反映流体物理性质对对流传热过程的影响。记为Pr。<br>它的表达式为：</p>
+
 <script type="math/tex; mode=display">Pr=\frac{\nu}{\alpha}=\frac{\mu{C_p}}{\kappa}</script><p>其中,\(\mu\)为粘度,\(C_{p}\)为等压比热容，\(\kappa\)为热导率，\(\alpha\)为热扩散系数，\(\nu\)为运动粘度。参考wikipedia的相关词条，普朗特常数表示动量扩散系数\(\alpha\)（\(\frac{\mu}{\rho}\)）与温度扩散系数的比值。</p>
 <h3><span id="applications">Applications</span></h3><p>根据Louis Moresi et al.(2002)在地球动力学的数值模拟过程中，将地球看成不可压缩的具有粘弹性值得麦克斯维尔流体。其具有有限的Prandlt number值。温度对于动力影响十分重要，因此考虑由于温度的变化引起的密度差异来作为受力方程：</p>
 <script type="math/tex; mode=display">\nabla\cdot\tau-\nabla{p}=g\rho\_0(1-\alpha_T{T})\hat{z}</script><p>其中,\(\tau\)为应力,g为重力加速度，\(\rho_0\)为参考温度下物质密度，\(\alpha\)为热扩散系数，\(\hat{z}\)为速度方向的单位矢量。</p>

@@ -12,10 +12,10 @@
     
     <meta name="author" content="Xiaobing Shen, Miao Chen">
     
-    <meta name="description" content="MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;],
-            inlineMath: [[&#39;$&#39;,&#39;$">
+    <meta name="description" content="Boussinesq approximation是基于忽略流体各项特征变化的情况下只考虑密度差异引起的重力变化的近似。其应用于流体在温度发生变化后通过热量传递进行的流动。在这种近似下，考虑不可压缩的牛顿流体。其中包含三大基本的方程：质量，动量以及能量守恒方程。下面进行逐个基本推导。
+
+    
+  ">
     
     
     
@@ -103,14 +103,15 @@
     </p>
   <p class="article-time">
     <time datetime="2018-03-24T14:38:24.000Z" itemprop="datePublished">2018-03-24</time>
-    Updated:<time datetime="2023-05-27T12:38:06.051Z" itemprop="dateModified">2023-05-27</time>
+    Updated:<time datetime="2023-05-27T13:18:09.376Z" itemprop="dateModified">2023-05-27</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		
-		<p><head>
+		<p>Boussinesq approximation是基于忽略流体各项特征变化的情况下只考虑密度差异引起的重力变化的近似。其应用于流体在温度发生变化后通过热量传递进行的流动。在这种近似下，考虑不可压缩的牛顿流体。其中包含三大基本的方程：质量，动量以及能量守恒方程。下面进行逐个基本推导。</p>
+<head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -120,7 +121,8 @@
             }
         });
     </script>
-</head><br>Boussinesq approximation是基于忽略流体各项特征变化的情况下只考虑密度差异引起的重力变化的近似。其应用于流体在温度发生变化后通过热量传递进行的流动。在这种近似下，考虑不可压缩的牛顿流体。其中包含三大基本的方程：质量，动量以及能量守恒方程。下面进行逐个基本推导。</p>
+</head>
+
 <h3><span id="conservation-of-mass-equation"><font color="dark"><em>conservation of mass equation</em></font></span></h3><p>也叫作连续性方程。基于流体不可压缩的特点，保证流体在微小的单元中流入和流出的质量相等。如图：<br><img src="http://t1.aixinxi.net/o_1c93kqajff0k10di1phjaqr1vtka.png-w.jpg"><br>以二维小微元为例，设在x,y方向上流体的流速分别为u，v。那么在x+\(\delta{x}\)处流体速度可以表示成，  </p>
 <script type="math/tex; mode=display">u(x+\delta{x})=u+\frac{\partial{u}}{\partial{x}}\delta{x}</script><p>则在x和x+\(\delta\)之间单位长度单位时间流过的流体为：  </p>
 <script type="math/tex; mode=display">u+\frac{\partial{u}}{\partial{x}}\delta{x}-u=\frac{\partial{u}}{\partial{x}}\delta{x}</script><p>在y方向上同理可知，在y和y+\(\delta{y}\)之间单位长度单位时间流过的流体为：</p>
