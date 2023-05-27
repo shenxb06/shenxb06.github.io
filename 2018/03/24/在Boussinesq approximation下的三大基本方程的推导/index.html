@@ -12,8 +12,10 @@
     
     <meta name="author" content="Xiaobing Shen, Miao Chen">
     
-    <meta name="description" content="Boussinesq approximation是基于忽略流体各项特征变化的情况下只考虑密度差异引起的重力变化的近似。其应用于流体在温度发生变化后通过热量传递进行的流动。在这种近似下，考虑不可压缩的牛顿流体。其中包含三大基本的方程：质量，动量以及能量守恒方程。下面进行逐个基本推导。
-conserva">
+    <meta name="description" content="MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;],
+            inlineMath: [[&#39;$&#39;,&#39;$">
     
     
     
@@ -47,7 +49,7 @@ conserva">
 				<h1 class="site-name"><a href="/" title="Geodynamics">Geodynamics</a></h1>
 				<a class="blog-motto">We are all in the gutter, but some of us are looking at the stars.</a>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -101,14 +103,24 @@ conserva">
     </p>
   <p class="article-time">
     <time datetime="2018-03-24T14:38:24.000Z" itemprop="datePublished">2018-03-24</time>
-    更新日期:<time datetime="2018-04-28T08:27:58.609Z" itemprop="dateModified">2018-04-28</time>
+    Updated:<time datetime="2023-05-27T12:38:06.051Z" itemprop="dateModified">2023-05-27</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		
-		<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script><br>Boussinesq approximation是基于忽略流体各项特征变化的情况下只考虑密度差异引起的重力变化的近似。其应用于流体在温度发生变化后通过热量传递进行的流动。在这种近似下，考虑不可压缩的牛顿流体。其中包含三大基本的方程：质量，动量以及能量守恒方程。下面进行逐个基本推导。</p>
+		<p><head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head><br>Boussinesq approximation是基于忽略流体各项特征变化的情况下只考虑密度差异引起的重力变化的近似。其应用于流体在温度发生变化后通过热量传递进行的流动。在这种近似下，考虑不可压缩的牛顿流体。其中包含三大基本的方程：质量，动量以及能量守恒方程。下面进行逐个基本推导。</p>
 <h3><span id="conservation-of-mass-equation"><font color="dark"><em>conservation of mass equation</em></font></span></h3><p>也叫作连续性方程。基于流体不可压缩的特点，保证流体在微小的单元中流入和流出的质量相等。如图：<br><img src="http://t1.aixinxi.net/o_1c93kqajff0k10di1phjaqr1vtka.png-w.jpg"><br>以二维小微元为例，设在x,y方向上流体的流速分别为u，v。那么在x+\(\delta{x}\)处流体速度可以表示成，  </p>
 <script type="math/tex; mode=display">u(x+\delta{x})=u+\frac{\partial{u}}{\partial{x}}\delta{x}</script><p>则在x和x+\(\delta\)之间单位长度单位时间流过的流体为：  </p>
 <script type="math/tex; mode=display">u+\frac{\partial{u}}{\partial{x}}\delta{x}-u=\frac{\partial{u}}{\partial{x}}\delta{x}</script><p>在y方向上同理可知，在y和y+\(\delta{y}\)之间单位长度单位时间流过的流体为：</p>
@@ -196,10 +208,10 @@ conserva">
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 <div id="authorInfo">
 	
@@ -216,7 +228,7 @@ conserva">
 
   
 <div class="categorieslist">
-	<p class="asidetitle">分类</p>
+	<p class="asidetitle">Categories</p>
 		<ul>
 		
 			<li><a href="/categories/CitCom/" title="CitCom">CitCom<sup>1</sup></a></li>
@@ -233,7 +245,7 @@ conserva">
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			<li><a href="/tags/benchmark/" title="benchmark">benchmark<sup>1</sup></a></li>
@@ -258,12 +270,12 @@ conserva">
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   
   <div class="tagcloudlist">
-    <p class="asidetitle">标签云</p>
+    <p class="asidetitle">Tag Cloud</p>
     <div class="tagcloudlist clearfix">
        <a href="/tags/benchmark/" style="font-size: 10px;">benchmark</a> <a href="/tags/参数设置/" style="font-size: 20px;">参数设置</a> <a href="/tags/数值模拟/" style="font-size: 10px;">数值模拟</a> <a href="/tags/方程推导/" style="font-size: 10px;">方程推导</a>
     </div>
